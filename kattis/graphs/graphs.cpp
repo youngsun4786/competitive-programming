@@ -2,6 +2,7 @@
 #include<vector>
 #include<iostream>
 #include<list>
+#include<tuple>
 
 using namespace std;
 
@@ -13,15 +14,13 @@ struct Edge {
 
 void addEdge(int u, int v, int w, vector<Edge> adj[]) {
     Edge e;
-    e.node = v;
-    e.weight = w;
+    e.weight = w; e.node = v;
     adj[u].pb(e);
 }
 
 int main() {
 
     int N, M; cin >> N >> M;
-
     // vector<Edge> adj[N + 1];
 
 
@@ -39,19 +38,26 @@ int main() {
     list<int> adj[N];
 
     for (int i = 0; i < M; ++i) {
-    int u, v; cin >> u >> v;
-    adj[u].__emplace_back(v);
-    adj[v].__emplace_back(u);
+        int u, v; cin >> u >> v;
+        adj[u].pb(v);
+        adj[v].pb(u);
     }
 
     printf("printing adj list\n");
-    
-    for (int i = 0; i < N; ++i) {
-        for (auto &nodes : adj[i]) {
-            cout << nodes << " ";
+
+    for (auto & nodes : adj) {
+        for (auto & next : nodes) {
+            cout << next << " ";
         }
-        cout << "\n";
+        cout << endl;
     }
+
+    // for (int i = 0; i < N; ++i) {
+    //     for (auto &nodes : adj[i]) {
+    //         cout << nodes << " ";
+    //     }
+    //     cout << "\n";
+    // }
 
 
     return 0;
