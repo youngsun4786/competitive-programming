@@ -16,7 +16,6 @@ void dfs (int s, int parent, vector<vector<int> > &adj) {
 
     // store extra information about the parent
     
-
     for (auto u : adj[s]) {
         // the starting node becomes the parent
         dfs(u, s, adj); // this vertex now visits the parent 
