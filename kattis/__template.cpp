@@ -1,5 +1,3 @@
-using namespace std;
-
 #include<iostream>
 #include<vector>
 #include<string>
@@ -15,6 +13,9 @@ using namespace std;
 #define ms(arr, v) memset(arr, v, sizeof(arr))
 #define f first
 #define s second
+#define mp make_pair
+
+using namespace std;
 
 typedef long long ll;
 typedef long double lld;
@@ -27,11 +28,9 @@ typedef vector<pii> vpi;
 typedef vector<pll> vpl;
 
 const lld pi = 3.14159265358979323846;
-// const ll mod = 1000000007;
-// const ll mod = 998244353;
-// ll mod;
  
 ll n, m, k, q, l, r, x, y, z;
+const ll INF = 4e18;
 const ll template_array_size = 1e6 + 585;
 ll a[template_array_size];
 ll b[template_array_size];
@@ -41,7 +40,9 @@ ll ans = 0;
 
 
 void solve(int tc = 0) {
-    pll yo = make_pair(0, 1);
+    // cin >> n >> m;
+    pll yo = mp(0, 1);
+    cout << yo.f << " " << yo.s << "\n";
 }
 
 
@@ -55,11 +56,9 @@ int main() {
     //scanf("%02d: %c %19s", &x, &ch, &str)
 
 
-
     // C style stout
     // c fof char, d for int, s for string
     //printf("%d %c %s\n", &x, &ch, &str)
-
 
     int tc = 1;
 	// cin >> tc;
