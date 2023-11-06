@@ -1,0 +1,73 @@
+using namespace std;
+
+#include<iostream>
+#include<vector>
+#include<string>
+#include<map>
+#include<deque>
+#include<set>
+#include<algorithm>
+#include <utility>  
+#define REP(i, a, b) for (int i = a; i < b; i++)
+#define pb push_back
+#define readgraph(list, edges) for (int i = 0; i < edges; i++) {int a, b; cin >> a >> b; a--; b--; list[a].pb(b); list[b].pb(a);}
+#define getunique(v) {sort(all(v)); v.erase(unique(all(v)), v.end());}
+#define ms(arr, v) memset(arr, v, sizeof(arr))
+#define f first
+#define s second
+
+typedef long long ll;
+typedef long double lld;
+typedef unsigned long long ull;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
+typedef vector<int> vi;
+typedef vector<ll> vl;
+typedef vector<pii> vpi;
+typedef vector<pll> vpl;
+
+const lld pi = 3.14159265358979323846;
+// const ll mod = 1000000007;
+// const ll mod = 998244353;
+// ll mod;
+ 
+ll n, m, k, q, l, r, x, y, z;
+const ll template_array_size = 1e6 + 585;
+ll a[template_array_size];
+ll b[template_array_size];
+ll c[template_array_size];
+string s, t;
+ll ans = 0;
+
+
+void solve(int tc = 0) {
+    pll yo = make_pair(0, 1);
+}
+
+
+int main() {
+    ios_base::sync_with_stdio(false); 
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    // C style stdin (better for multiple inputs)
+    // c fof char, d for int, s for string
+    //scanf("%02d: %c %19s", &x, &ch, &str)
+
+
+
+    // C style stout
+    // c fof char, d for int, s for string
+    //printf("%d %c %s\n", &x, &ch, &str)
+
+
+    int tc = 1;
+	// cin >> tc;
+	for (int t = 0; t < tc; t++) solve(t);
+
+    return 0;
+}
+
+ 
+
+ 
